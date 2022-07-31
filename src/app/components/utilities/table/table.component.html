@@ -1,0 +1,23 @@
+<div class="list">
+    <div class="list" *ngIf="datos.length == 0"><h2>NO HEROES FOUND</h2></div>
+    <table *ngIf="datos.length > 0" mat-table [dataSource]="datos" class="table" #tabla1>
+
+        <ng-container matColumnDef="photo">
+          <th mat-header-cell *matHeaderCellDef class="centerTitle"> FOTO </th>
+          <td mat-cell *matCellDef="let hero"><img [src]="hero.photo" alt="hero"/> </td>
+        </ng-container>
+
+        <ng-container matColumnDef="name">
+          <th mat-header-cell *matHeaderCellDef class="centerTitle"> NOMBRE </th>
+          <td mat-cell *matCellDef="let hero"> {{hero.name}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="option">
+          <th mat-header-cell *matHeaderCellDef class="centerTitle"> OPCIÓN </th>
+          <td mat-cell *matCellDef="let hero"> <button mat-raised-button color="warn" (click)="getDetail(hero)">Ver detalles</button> </td>
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="columnas"></tr>
+        <tr mat-row *matRowDef="let row; columns: columnas;"></tr>
+      </table>
+</div>

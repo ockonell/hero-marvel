@@ -1,0 +1,15 @@
+.list {
+    padding-top: 20px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    .table {
+        width: 100%;
+        .centerTitle{
+            text-align: center;
+            color: #ed1a23;
+            font-weight: bold;
+            font-size: large;
+        }
+    }
+}

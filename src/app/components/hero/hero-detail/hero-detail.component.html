@@ -1,0 +1,8 @@
+<div class="center">
+    <div *ngIf="!requestSend">
+        <h2><strong>Name: </strong>{{hero.name}}</h2>
+        <img [src]="hero.photo"/>
+        <p><strong>Descripción: </strong>{{hero.description}}</p>
+    </div>
+    <mat-spinner *ngIf="requestSend" color="warn" class="spinner"></mat-spinner>
+</div>

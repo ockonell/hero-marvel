@@ -1,0 +1,5 @@
+<div class="center">
+    <app-input-search></app-input-search>
+    <app-table *ngIf="heros.length > 0" [data]="heros"></app-table>
+    <mat-spinner *ngIf="requestSend" color="warn" class="spinner"></mat-spinner>
+</div>
